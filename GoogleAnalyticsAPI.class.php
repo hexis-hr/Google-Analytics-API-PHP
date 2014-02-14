@@ -714,6 +714,7 @@ class Http {
 			curl_setopt($curl, CURLOPT_POST, true);
 			curl_setopt($curl, CURLOPT_POSTFIELDS, $params);
 		}
+		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 		curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 		$data = curl_exec($curl);
